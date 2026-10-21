@@ -1,0 +1,424 @@
+/* Front-end.css — versión dashboard con colores cálidos */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background-color: rgb(251, 240, 227);   /* crema cálido */
+    color: rgb(62, 39, 35);                 /* marrón tinta */
+}
+
+/* ---- Esqueleto del dashboard: sidebar + contenido ---- */
+.dashboard{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 230px;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: rgb(78, 52, 46);      /* marrón chocolate */
+    color: rgb(255, 243, 224);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.logo{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.sublogo{
+    margin: 0;
+    font-size: 0.85em;
+    color: rgb(255, 198, 128);              /* ámbar suave */
+}
+
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a{
+    color: rgb(255, 243, 224);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+.sidebar nav a:hover{
+    background-color: rgb(255, 112, 67);    /* coral */
+    color: white;
+}
+
+/* Menú desplegable de módulos (details/summary nativo de HTML) */
+.menu-modulos summary{
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: rgb(255, 243, 224);
+}
+
+.menu-modulos summary::-webkit-details-marker{
+    display: none;      /* oculta la flechita por defecto del navegador */
+}
+
+.menu-modulos summary::after{
+    content: "▾";
+    float: right;
+    transition: transform 0.2s;
+}
+
+.menu-modulos[open] summary::after{
+    transform: rotate(-180deg);     /* al abrir, la flecha apunta arriba */
+}
+
+.menu-modulos summary:hover{
+    background-color: rgb(255, 112, 67);
+    color: white;
+}
+
+.menu-modulos a{
+    display: block;
+    margin: 4px 0 0 14px;
+    padding: 7px 12px;
+    font-size: 0.9em;
+    color: rgb(255, 198, 128);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.menu-modulos a:hover{
+    background-color: rgba(255, 112, 67, 0.25);
+    color: white;
+}
+
+.sidebar-pie{
+    margin-top: auto;
+    font-size: 0.8em;
+    color: rgb(255, 198, 128);
+}
+
+/* Medallón del logo institucional en el sidebar */
+.logo-sidebar{
+    align-self: center;      /* centrado horizontal dentro de la sidebar */
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+    background-color: rgb(251, 240, 227);    /* crema: resalta sobre el chocolate */
+    border-radius: 50%;
+    border: 4px solid rgb(255, 178, 72);     /* aro ámbar, tu paleta */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    margin-bottom: 5px;
+}
+
+.contenido{
+    flex: 1;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ---- Barra superior ---- */
+header{
+    background-color: white;
+    border-radius: 16px;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(78, 52, 46, 0.08);
+}
+
+header h2{
+    margin: 0 0 4px;
+}
+
+header p{
+    margin: 0;
+    color: rgb(141, 110, 99);
+}
+
+.avatar{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgb(255, 112, 67), rgb(255, 178, 72));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+/* ---- Zona central ---- */
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#inicio{
+    background-color: white;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(78, 52, 46, 0.08);
+}
+
+/* Título de bienvenida con degradado (signature de los dashboards) */
+#inicio h3{
+    margin: 0 0 6px;
+    font-size: 2.1em;
+    background: linear-gradient(90deg, rgb(62, 39, 35), rgb(255, 112, 67));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+#inicio p{
+    margin: 0 0 20px;
+    color: rgb(141, 110, 99);
+}
+
+button{
+    background: linear-gradient(135deg, rgb(255, 112, 67), rgb(255, 178, 72));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 112, 67, 0.35);
+}
+
+button:hover{
+    transform: translateY(-2px);
+}
+
+#mas-info{
+    margin-top: 15px;
+    background-color: rgb(255, 248, 240);
+    border: 2px dashed rgb(255, 178, 72);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+#mas-info img{
+    border-radius: 12px;
+}
+
+/* ---- Tarjetas de servicios ---- */
+#servicios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#servicios h3{
+    grid-column: 1 / -1;    /* el título ocupa las 3 columnas y no roba un hueco de tarjeta */
+    margin: 0;
+}
+
+article{
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    border-top: 5px solid rgb(255, 112, 67);
+    box-shadow: 0 4px 12px rgba(78, 52, 46, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+article:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(255, 112, 67, 0.2);
+}
+
+.icono{
+    font-size: 2em;
+}
+
+.barra{
+    height: 10px;
+    background-color: rgb(255, 224, 196);
+    border-radius: 999px;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+.barra span{
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(255, 112, 67), rgb(255, 178, 72));
+    border-radius: 999px;
+}
+
+/* ---- Pie de página ---- */
+#pie{
+    background-color: rgb(78, 52, 46);
+    color: rgb(255, 243, 224);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+#pie a{
+    color: rgb(255, 178, 72);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+#pie a:hover{
+    text-decoration: underline;
+}
+
+/* ---- Estadísticas: gráfico de barras ---- */
+#estadisticas{
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(78, 52, 46, 0.08);
+}
+
+#estadisticas h3,
+#comentarios h3{
+    margin-top: 0;
+}
+
+.grafico{
+    display: flex;
+    align-items: flex-end;      /* todas las barras nacen del piso */
+    gap: 20px;
+    height: 260px;
+    padding: 10px 10px 0;
+}
+
+.columna{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.valor{
+    font-weight: bold;
+    font-size: 0.85em;
+    color: rgb(62, 39, 35);
+}
+
+.col-barra{
+    width: 100%;
+    max-width: 48px;
+    background: linear-gradient(180deg, rgb(255, 112, 67), rgb(255, 178, 72));
+    border-radius: 8px 8px 2px 2px;
+    transition: transform 0.2s;
+}
+
+.columna:hover .col-barra{
+    transform: scaleY(1.03);
+}
+
+.etiqueta{
+    font-size: 0.85em;
+    color: rgb(141, 110, 99);
+}
+
+.fuente{
+    color: rgb(141, 110, 99);
+    font-size: 0.8em;
+    margin: 10px 0 0;
+}
+
+/* ---- Comentarios ---- */
+#comentarios{
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(78, 52, 46, 0.08);
+}
+
+.lista-comentarios{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.comentario{
+    background-color: rgb(255, 248, 240);
+    border: 1px solid rgb(255, 224, 196);
+    border-radius: 12px;
+    padding: 12px 15px;
+}
+
+.cabecera-com{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.cabecera-com p{
+    margin: 0;
+}
+
+.mini-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgb(255, 112, 67), rgb(255, 178, 72));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.estrellas{
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+
+.comentario p{
+    margin: 0;
+}
+
+/* ---- Responsive: en pantallas chicas, sidebar arriba y tarjetas apiladas ---- */
+@media (max-width: 700px){
+    .dashboard{
+        flex-direction: column;
+    }
+    .sidebar{
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .sidebar nav{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #servicios{
+        grid-template-columns: 1fr;
+    }
+}

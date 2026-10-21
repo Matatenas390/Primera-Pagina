@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CETPRO Bayóvar | Programación de Sistemas</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="logo">🎓 CETPRO Bayóvar</div>
+        <p class="sublogo">Portal institucional</p>
+        <nav>
+          <a href="#inicio">🏠 Inicio</a>
+          <a href="#estadisticas">📊 Estadísticas</a>
+          <a href="#comentarios">💬 Comentarios</a>
+          <a href="#pie">📞 Contactos</a>
+        </nav>
+        <details class="menu-modulos">
+          <summary>📚 Módulos</summary>
+          <a href="#servicios">🧑‍💻 Programación de Sistemas</a>
+          <a href="#servicios">🧁 Pastelería</a>
+          <a href="#servicios">🧵 Costura</a>
+          <a href="#servicios">🌐 Redes</a>
+          <a href="#servicios">🗂️ Ofimática</a>
+          <a href="#servicios">💅 Cosmetología</a>
+        </details>
+        <img class="logo-sidebar" src="cetpro.png" alt="Logo CETPRO Bayóvar">
+        <div class="sidebar-pie">CETPRO Bayóvar · 2026</div>
+      </aside>
+
+      <div class="contenido">
+        <header>
+          <div>
+            <h2>CETPRO Bayóvar</h2>
+            <p>Programación de Sistemas</p>
+          </div>
+          <div class="avatar">🧑‍💻</div>
+        </header>
+
+        <main>
+          <section id="inicio">
+            <h3>Bienvenido al CetPro 👋</h3>
+            <p>Tu centro de formación técnica en Bayóvar</p>
+            <button id="conocer" onclick="Conocer()">Conoce Más 👀</button>
+            <div id="mas-info" hidden>
+              <p>CETPRO Bayóvar forma técnicos con práctica continua, docentes con experiencia en el rubro y horarios que se acomodan a tu día a día.</p>
+              <img src="laptop.jpg" alt="Laptop donde se programa el sitio" width="300">
+            </div>
+          </section>
+
+          <section id="servicios">
+            <h3>🧰 Nuestros módulos</h3>
+            <article>
+              <span class="icono">🧑‍💻</span>
+              <h3>Programación de Sistemas</h3>
+              <p>Diseño y desarrollo de software</p>
+              <div class="barra"><span style="width: 90%"></span></div>
+            </article>
+            <article>
+              <span class="icono">🧁</span>
+              <h3>Pastelería</h3>
+              <p>Repostería y decoración</p>
+              <div class="barra"><span style="width: 80%"></span></div>
+            </article>
+            <article>
+              <span class="icono">🧵</span>
+              <h3>Costura</h3>
+              <p>Confección y diseño textil</p>
+              <div class="barra"><span style="width: 75%"></span></div>
+            </article>
+            <article>
+              <span class="icono">🌐</span>
+              <h3>Redes</h3>
+              <p>Instalación y mantenimiento de redes</p>
+              <div class="barra"><span style="width: 70%"></span></div>
+            </article>
+            <article>
+              <span class="icono">🗂️</span>
+              <h3>Ofimática</h3>
+              <p>Office y herramientas digitales</p>
+              <div class="barra"><span style="width: 85%"></span></div>
+            </article>
+            <article>
+              <span class="icono">💅</span>
+              <h3>Cosmetología</h3>
+              <p>Estética y cuidado personal</p>
+              <div class="barra"><span style="width: 65%"></span></div>
+            </article>
+          </section>
+
+          <section id="estadisticas">
+            <h3>📊 Ingresantes por año</h3>
+            <div class="grafico">
+              <div class="columna">
+                <span class="valor">120</span>
+                <div class="col-barra" style="height: 100px"></div> <!-- 120 ÷ 1.2 -->
+                <span class="etiqueta">2022</span>
+              </div>
+              <div class="columna">
+                <span class="valor">180</span>
+                <div class="col-barra" style="height: 150px"></div> <!-- 180 ÷ 1.2 -->
+                <span class="etiqueta">2023</span>
+              </div>
+              <div class="columna">
+                <span class="valor">150</span>
+                <div class="col-barra" style="height: 125px"></div> <!-- 150 ÷ 1.2 -->
+                <span class="etiqueta">2024</span>
+              </div>
+              <div class="columna">
+                <span class="valor">210</span>
+                <div class="col-barra" style="height: 175px"></div> <!-- 210 ÷ 1.2 -->
+                <span class="etiqueta">2025</span>
+              </div>
+              <div class="columna">
+                <span class="valor">240</span>
+                <div class="col-barra" style="height: 200px"></div> <!-- 240 ÷ 1.2 -->
+                <span class="etiqueta">2026</span>
+              </div>
+            </div>
+            <p class="fuente">Datos de ejemplo, solo práctica de clase (no oficiales).</p>
+          </section>
+
+          <section id="comentarios">
+            <h3>💬 Opiniones sobre CETPRO Bayóvar</h3>
+            <div class="lista-comentarios">
+              <article class="comentario">
+                <div class="cabecera-com">
+                  <span class="mini-avatar">👩</span>
+                  <div>
+                    <strong>Rosa Quispe</strong>
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                  </div>
+                </div>
+                <p>"Los profesores son pacientes y en el módulo de Programación de Sistemas hice mis primeros proyectos de verdad. Muy buena inversión de mi tiempo."</p>
+              </article>
+              <article class="comentario">
+                <div class="cabecera-com">
+                  <span class="mini-avatar">🧑</span>
+                  <div>
+                    <strong>Luis Torres</strong>
+                    <div class="estrellas">⭐⭐⭐⭐☆</div>
+                  </div>
+                </div>
+                <p>"Buena institución y asequible. Falta algo de equipo en los laboratorios, pero lo que aprendas depende de tu esfuerzo."</p>
+              </article>
+              <article class="comentario">
+                <div class="cabecera-com">
+                  <span class="mini-avatar">👨</span>
+                  <div>
+                    <strong>Jorge Mendoza</strong>
+                    <div class="estrellas">⭐⭐⭐☆☆</div>
+                  </div>
+                </div>
+                <p>"Me gusta cómo se organizan los módulos, aunque me gustaría más horarios nocturnos para los que trabajamos de día."</p>
+              </article>
+              <article class="comentario">
+                <div class="cabecera-com">
+                  <span class="mini-avatar">👧</span>
+                  <div>
+                    <strong>Andrea Salas</strong>
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                  </div>
+                </div>
+                <p>"Entré sin saber nada de computadoras y ahora hago mis propios proyectos. El ambiente es muy acogedor."</p>
+              </article>
+            </div>
+            <p class="fuente">Opiniones de ejemplo para la práctica (no reales).</p>
+          </section>
+        </main>
+
+        <footer id="pie">
+          <div>CETPRO Bayóvar · Programación de Sistemas</div>
+          <div>📍 Av. Ejemplo 123, Lima, Perú</div>
+          <div>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+          </div>
+          <div>© 2026 - Todos los derechos reservados</div>
+        </footer>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
